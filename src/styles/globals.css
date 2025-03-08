@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../module//customerCard.css";
+@import "../templates/detailsCustomerPage.css";
+
+
+body {
+    background: #041019;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: monospace;
+    font-size: 1.4em;
+}
+
+.layout-container {
+    max-width: 999px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.main {
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@layer components {
+
+    .button-style--save,
+    .button-style--cancel {
+        @apply rounded-md mt-4 py-1 px-2 border-2 border-dashed border-[#167709]
+    }
+
+    .button-style--cancel {
+        @apply border-2 border-dashed border-[#df1c1c]
+    }
+
+    .button-style--cancel,
+    .button-style--save {
+
+        &:hover {
+            @apply cursor-pointer
+        }
+
+    }
+
+    .list__remove-button, .list__add-button button {
+        border-radius: 0.3rem;
+        -webkit-border-radius: 0.3rem;
+        -moz-border-radius: 0.3rem;
+        -ms-border-radius: 0.3rem;
+        -o-border-radius: 0.3rem;
+        margin: 1rem 0;
+        padding: 0.3rem 0;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+
+    .list__remove-button {
+        border: red 2px dashed;
+    }
+
+    .list__add-button button {
+        width: 100%;
+        border: #167709 2px dashed;
+    }
+}

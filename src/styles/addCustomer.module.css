@@ -1,0 +1,10 @@
+
+.add-customer {
+    @apply my-4;
+}
+
+.add-customer__buttons{
+    @apply flex justify-between;
+}
+
+

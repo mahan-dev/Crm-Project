@@ -1,0 +1,20 @@
+.details-customer-page {
+    @apply grid bg-[#4b4b4b3d] px-4 py-3 rounded-md ;
+    
+    
+}
+
+.details-customer-page__info{
+    @apply grid place-content-between  mb-5 gap-2 ;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px) );
+    
+}
+
+.customer-page__products{
+    @apply flex flex-col w-full mx-4;
+
+}
+
+.customer-page__products h3 {
+    @apply w-fit bg-[#ff5a93] px-3 rounded-md m-auto;
+}
