@@ -1,5 +1,6 @@
 import Customer from "../../../models/Customer";
-import isConnected from "../../../utils/IsConnected";
+import connectToDb from "../../../utils/Connection";
+
 
 const handler = async (req, res) => {
   const post = req.method === "POST";
@@ -7,7 +8,7 @@ const handler = async (req, res) => {
   console.log(data)
 
   try {
-    await isConnected(res);
+    await connectToDb(res);
   } catch (error) {
     console.log("error occurred", error);
     res

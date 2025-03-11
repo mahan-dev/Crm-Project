@@ -1,6 +1,6 @@
-import { data } from "autoprefixer";
+
 import Customer from "../../../models/Customer";
-import isConnected from "../../../utils/IsConnected";
+import connectToDb from "../../../utils/Connection";
 
 
 const handler = async(req, res) => {
@@ -13,7 +13,7 @@ const handler = async(req, res) => {
     
 
     try {
-        await isConnected(res)
+        await connectToDb(res)
     } catch(error) {
         console.log("error occurred", error)
         res
